@@ -2,8 +2,8 @@
 
 all: html
 
-html: tutorial.Rmd
-	R -e "rmarkdown::render('tutorial.Rmd')"
+html: readme.Rmd
+	R -e "rmarkdown::render('readme.Rmd')"
 
 clean:
-	rm tutorial.html
+	rm readme.md

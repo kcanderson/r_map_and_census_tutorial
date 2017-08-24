@@ -2,6 +2,9 @@
 title: "Practicing R with map and census data"
 author: K.C. Anderson
 date: August 20, 2017
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 ``` {r, echo=FALSE}
