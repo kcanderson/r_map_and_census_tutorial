@@ -6,7 +6,7 @@ My `R` skills have atrophied and need practice. I'm going to run through a simpl
 Building
 ========
 
-I have included a `makefile` in this project that will compile the `Rmd` and produce `tutorial.html`.
+I have included a `makefile` in this project that will compile the `Rmd` to produce a new markdown file, `readme.md`. This file can be consumed by `GitHub`.
 
     >>> cd r_map_and_census_tutorial
     >>> make
