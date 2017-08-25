@@ -184,6 +184,20 @@ ggplot(data=data.county.va) +
 
 The relationship in Virginia appears stronger than Colorado. The income gradient itself must exacerbate the discrepancy-- the best facilities and doctors will naturally congregate in the D.C. region, leaving even the middle class in southern Virginia fewer options.
 
+And California:
+
+``` r
+data.county.ca <- subset(data.county, region == "california")
+ggplot(data=data.county.ca) +
+    geom_polygon(aes(x=long, y=lat, group=group, fill=life.expectancy), color="black") +
+    geom_point(aes(x=center.x, y=center.y, size=IPE010209D)) +
+    scale_fill_gradient(low="white", high="red") +
+    scale_size(range=range(0.01, 4), name="Median income\n($)", guide="legend") +
+    coord_fixed(1.3)    
+```
+
+![](readme_files/figure-markdown_github/unnamed-chunk-15-1.png)
+
 Looking more closely at the relationship
 ========================================
 
@@ -196,9 +210,11 @@ ggplot(data=data.county.co) +
     xlab("Median family income ($)") + ylab("Life expectancy (years)")
 ```
 
-![](readme_files/figure-markdown_github/unnamed-chunk-15-1.png)
+![](readme_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
 In Colorado, the variables are certainly correlated, though the realtionship appears weaker at higher income levels.
+
+Here is the same scatter plot for Virginia and California.
 
 ``` r
 ggplot(data=data.county.va, aes(x=IPE010209D, y=life.expectancy)) +
@@ -206,4 +222,12 @@ ggplot(data=data.county.va, aes(x=IPE010209D, y=life.expectancy)) +
     xlab("Median family income ($)") + ylab("Life expectancy (years)")
 ```
 
-![](readme_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![](readme_files/figure-markdown_github/unnamed-chunk-17-1.png)
+
+``` r
+ggplot(data=data.county.ca, aes(x=IPE010209D, y=life.expectancy)) +
+    geom_point() +
+    xlab("Median family income ($)") + ylab("Life expectancy (years)")
+```
+
+![](readme_files/figure-markdown_github/unnamed-chunk-17-2.png)
