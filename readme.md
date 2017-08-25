@@ -231,3 +231,13 @@ ggplot(data=data.county.ca, aes(x=IPE010209D, y=life.expectancy)) +
 ```
 
 ![](readme_files/figure-markdown_github/unnamed-chunk-17-2.png)
+
+And what about the data for all counties in the United States?
+
+``` r
+ggplot(data=data.county, aes(x=IPE010209D, y=life.expectancy)) +
+    geom_point() +
+    xlab("Median family income ($)") + ylab("Life expectancy (years)")
+```
+
+![](readme_files/figure-markdown_github/unnamed-chunk-18-1.png)
