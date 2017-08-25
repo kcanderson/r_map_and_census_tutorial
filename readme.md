@@ -3,6 +3,11 @@ Introduction
 
 My `R` skills have atrophied and need practice. I'm going to run through a simple tutorial that renders US county map information with other demographic data from the Census Bureau. Motivated by [literate programming](https://en.wikipedia.org/wiki/Literate_programming) and [science reproducibility](http://kbroman.org/knitr_knutshell/pages/reproducible.html), this tutorial is built into an R-markdown document. You, too, can download and compile this file into HTML.
 
+Requirements
+============
+
+This tutorial requires the `ggplot2` and `maps` packages.
+
 Building
 ========
 
